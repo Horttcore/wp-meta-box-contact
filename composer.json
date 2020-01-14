@@ -1,0 +1,21 @@
+{
+  "name": "ralfhortt/wp-meta-box-contact",
+  "description": "A WordPress meta box for contact data",
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Ralf Hortt",
+      "email": "me@horttcore.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RalfHortt\\MetaBoxContact\\": "src/"
+    }
+  },
+  "require": {
+    "horttcore/wp-meta-box": "^1.0",
+    "ralfhortt/translator-service": "^1.0"
+  }
+}
