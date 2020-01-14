@@ -66,6 +66,6 @@ add_filter('wp-meta-box-contact-phone', '__return_false');
 
 ## Changelog
 
-### v1.0.0
+### v1.0.0 - 2020-01-14
 
 - Initial release
