@@ -9,8 +9,6 @@
 ```php
 /*
 new MetaBoxContact(
-    string $identifier = 'contact-data',
-    string $name = 'Contact',
     array $screen = [],
     string $context = 'advanced',
     string $priority = 'default'
@@ -24,7 +22,7 @@ new MetaBoxContact(
 use RalfHortt\MetaBoxContact\MetaBoxContact;
 
 PluginFactory::create()
-    ->addService(MetaBoxContact::class, 'contact-data', 'Contact', ['page'], 'advanced', 'default')
+    ->addService(MetaBoxContact::class, ['page'], 'advanced', 'default')
     ->boot();
 ```
 
@@ -33,13 +31,15 @@ PluginFactory::create()
 ```php
 use RalfHortt\MetaBoxContact\MetaBoxContact;
 
-(new MetaBoxContact('contact-data', 'Contact', ['page'], 'advanced', 'default' ))->register();
+(new MetaBoxContact(['page'], 'advanced', 'default' ))->register();
 ```
 
 ## Hooks
 
 ### Filter
 
+- `wp-meta-box-contact-meta-box-identifier` - Change meta box id
+- `wp-meta-box-contact-meta-box-label` - Change meta box label
 - `wp-meta-box-contact-phone` - Hide all phone fields
 - `wp-meta-box-contact-phone-{$postType}` - Hide phone field for \$postType
 - `wp-meta-box-contact-fax` - Hide all fax fields
