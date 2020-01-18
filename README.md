@@ -67,7 +67,8 @@ $url = get_post_meta( $post->ID, 'contact-url', TRUE );
 
 ```php
 <?php
-add_filter('wp-meta-box-contact-phone', '__return_false');
+(new MetaBoxContact(['page'], 'advanced', 'default' ))->register();
+add_filter('wp-meta-box-contact-url-page', '__return_false');
 ```
 
 ## Action
@@ -80,6 +81,7 @@ add_filter('wp-meta-box-contact-phone', '__return_false');
 
 - Template tags
 - REST API Support
+- Register meta fields
 
 ## Changelog
 
