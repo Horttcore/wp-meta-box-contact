@@ -32,7 +32,7 @@ class MetaBoxContact extends MetaBox
         $url = get_post_meta($post->ID, '_contact-url', true); ?>
         <table class="form-table">
 
-            <?php do_action('wp-meta-contact/before', $post) ?>
+            <?php do_action('wp-meta-box-contact/before', $post) ?>
 
             <?php if (apply_filters('wp-meta-box-contact/phone-'.$post->post_type, true)) { ?>
                 <tr>
@@ -97,6 +97,6 @@ class MetaBoxContact extends MetaBox
             update_post_meta($postId, '_contact-url', esc_url_raw($_POST['wp-meta-box-contact-url']));
         }
 
-        do_action('wp-meta-contact-save', $postId, $post);
+        do_action('wp-meta-box-contact/save', $postId, $post);
     }
 }
