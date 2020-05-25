@@ -33,7 +33,7 @@ class MetaBoxContact extends MetaBox
 		?>
         <table class="form-table">
 
-            <?php do_action( 'wp-meta-contact/before' ) ?>
+            <?php do_action( 'wp-meta-contact/before', $post ) ?>
 
             <?php if ( apply_filters('wp-meta-box-contact/phone-' . $post->post_type, true ) ) { ?>
                 <tr>
@@ -70,7 +70,7 @@ class MetaBoxContact extends MetaBox
                 </tr>
             <?php } ?>
 
-            <?php do_action( 'wp-meta-box-contact/after' ) ?>
+            <?php do_action( 'wp-meta-box-contact/after', $post ) ?>
 
         </table>
 		<?php
