@@ -15,7 +15,7 @@
     }
   },
   "require": {
-    "horttcore/wp-meta-box": "^1.0",
+    "horttcore/wp-meta-box": "^1.1",
     "ralfhortt/translator-service": "^1.0"
   }
 }
