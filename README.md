@@ -7,13 +7,11 @@
 ## Usage
 
 ```php
-/*
 new MetaBoxContact(
     array $screen = [],
     string $context = 'advanced',
     string $priority = 'default'
 )
-*/
 ```
 
 ### Serviceloader
@@ -77,17 +75,20 @@ add_filter('wp-meta-box-contact-url-page', '__return_false');
 - `wp-meta-contact/after` - Add fields after the url field
 - `wp-meta-contact/save` - Save custom fields
 
-## ToDo
-
-- Template tags
-- REST API Support
-- Register meta fields
-
 ## Changelog
+
+### v4.0 - 2020-11-06
+
+- Update dependency
+- Added translation
+
+### v3.0 - 2020-11-02
+
+- Updated dependency
 
 ### v.2.0.0 - 2020-01-15
 
-- Changed: Namespaced hooks
+- Changed: Namespac ed hooks
 - Changed: Removed redundant hooks
 - Fixed: Broke URL field
 

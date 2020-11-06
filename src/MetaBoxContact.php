@@ -14,16 +14,11 @@ class MetaBoxContact extends MetaBox
         $this->screen = $screen;
         $this->context = $context;
         $this->priority = $priority;
+
+        (new Translator('wp-meta-box-contact', dirname(\plugin_basename(__FILE__)).'/../languages/'))->register();
     }
 
-    public function register(): void
-    {
-        parent::register();
-
-        (new Translator('wp-meta-box-contact', dirname(\plugin_basename(__FILE__)).'/languages/'))->register();
-    }
-
-    public function render(\WP_Post $post): void
+    protected function render(\WP_Post $post, array $callbackArgs): void
     {
         $phone = \get_post_meta($post->ID, '_contact-phone', true);
         $fax = \get_post_meta($post->ID, '_contact-fax', true);
@@ -75,7 +70,7 @@ class MetaBoxContact extends MetaBox
 		<?php
     }
 
-    public function save(int $postId, \WP_Post $post, bool $update): void
+    protected function save(int $postId, \WP_Post $post, bool $update): void
     {
         if (\apply_filters('wp-meta-box-contact-phone-'.$post->post_type, true)) {
             \update_post_meta($postId, '_contact-phone', \sanitize_text_field($_POST['wp-meta-box-contact-phone']));

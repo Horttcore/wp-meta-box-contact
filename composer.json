@@ -2,7 +2,6 @@
   "name": "ralfhortt/wp-meta-box-contact",
   "description": "A WordPress meta box for contact data",
   "license": "MIT",
-  "version": "1.0.0",
   "authors": [
     {
       "name": "Ralf Hortt",
@@ -15,7 +14,7 @@
     }
   },
   "require": {
-    "horttcore/wp-meta-box": "^1.1",
+    "ralfhortt/wp-meta-box": "^2.0.2",
     "ralfhortt/translator-service": "^1.0"
   }
 }
