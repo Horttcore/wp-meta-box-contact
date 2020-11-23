@@ -14,7 +14,7 @@
     }
   },
   "require": {
-    "ralfhortt/wp-meta-box": "^2.0.2",
+    "ralfhortt/wp-meta-box": "^3",
     "ralfhortt/translator-service": "^1.0"
   }
 }
