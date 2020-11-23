@@ -77,6 +77,10 @@ add_filter('wp-meta-box-contact-url-page', '__return_false');
 
 ## Changelog
 
+### v4.1 - 2020-11-23
+
+- Update dependency
+
 ### v4.0 - 2020-11-06
 
 - Update dependency
