@@ -2,7 +2,7 @@
 
 namespace RalfHortt\MetaBoxContact;
 
-use Horttcore\MetaBoxes\MetaBox;
+use RalfHortt\MetaBoxes\MetaBox;
 use RalfHortt\TranslatorService\Translator;
 
 class MetaBoxContact extends MetaBox
